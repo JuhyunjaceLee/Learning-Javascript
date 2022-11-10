@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const car = {
+      //속성(property): 값이 함수가 "아닌" 유형
+      name: "MINI", //문자
+      model: "MINI COOPER S", //문자
+      color: ["red", "green", "blue"], //배열
+      mileage: 12.3, //숫자
+
+      //매서드(method): 값이 함수인 유형
+      power: function (x) {
+        if (x === "on") {
+          alert(`${this.name}의 시동이 켜졌습니다.`);
+        } else if (x === "off") {
+          alert(`${this.name}의 시동이 꺼졌습니다.`);
+        }
+      },
+    };
+
+    //1.객체 자체의 호출 : 객체명
+    document.write(car + "<br>");
+
+    //2.속성 호출 : 객체, 속성명
+    document.write(car.name + "<br>");
+    document.write(car.model + "<br>");
+    document.write(car.color + "<br>");
+    document.write(car.color[0] + "<br>");
+
+    //3.매서드호출 : 객체.매서드()
+    car.power("on");
+    car.power("off");
+  </script>
+</html>

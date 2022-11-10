@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function Score(name, ko, eng, math) {
+      this.name = name;
+      this.ko = ko;
+      this.eng = eng;
+      this.math = math;
+    }
+    Score.prototype.avg = function avg() {
+      return ((this.ko + this.eng + this.math) / 3).toFixed(2);
+    };
+
+    const stud01 = new Score("홍길동", 90, 80, 75);
+    const stud02 = new Score("김철수", 100, 90, 85);
+    const stud03 = new Score("박영희", 95, 100, 95);
+    document.write(stud01.avg());
+    document.write(stud02.avg());
+    document.write(stud03.avg());
+  </script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        text-decoration: none;
+      }
+      a {
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn" class="day">DAY</button>
+    <!-- <button class="night" data-mode="night">NIGHT</button> -->
+    <div>
+      <a href="#">링크입니다.</a>
+    </div>
+    <div>
+      <a href="#">링크입니다.</a>
+    </div>
+    <div>
+      <a href="#">링크입니다.</a>
+    </div>
+    <div>
+      <a href="#">링크입니다.</a>
+    </div>
+  </body>
+  <script>
+    const dayBtn = document.querySelector(".day");
+    const btn = document.querySelector("#btn");
+    const link = document.querySelectorAll("a");
+    // const nightBtn = document.querySelector(".night");
+    btn.addEventListener("click", () => {
+      if (btn.innerText === "DAY") {
+        document.querySelector("body").style.backgroundColor = "black";
+        btn.style.backgroundColor = "white";
+        btn.style.color = "black";
+        btn.innerText = "NIGHT";
+        let i = 0;
+        while (i < link.length) {
+          link[i].style.color = "red";
+          i = i + 1;
+        }
+      } else if (btn.innerText === "NIGHT") {
+        document.querySelector("body").style.backgroundColor = "white";
+        document.querySelector("button").style.backgroundColor = "black";
+        document.querySelector("button").style.color = "white";
+        btn.innerText = "DAY";
+        let j = 0;
+        while (j < link.length) {
+          link[j].style.color = "blue";
+          j++;
+        }
+      }
+    });
+
+    // let i = 1;
+    // const auto = setInterval(function () {
+    //   document.write(`${i}초가 지났습니다.<br>`);
+    //   i++;
+    // }, 1000);
+
+    // setTimeout(function () {
+    //   clearInterval(auto);
+    // }, 10000);
+
+    //2초마다 n초가 지났습니다. 문자열 출력하기
+    //(단, 10초에 출력 종료)
+    // let j = 1;
+    // const doubleCount = setInterval(function () {
+    //   document.write(`${j * 2}초가 지났습니다.<br>`);
+    //   j++;
+    // }, 2000);
+
+    // setTimeout(function () {
+    //   clearInterval(doubleCount);
+    // }, 10001);
+  </script>
+</html>

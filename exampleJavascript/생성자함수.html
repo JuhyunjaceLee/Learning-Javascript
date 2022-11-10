@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //생성자 함수 선언
+      function Mini(color, wheel, roof) {
+        this.color = color;
+        this.wheel = wheel;
+        this.roof = roof;
+      }
+      Mini.prototype.brand = "MINI 3Door";
+      Mini.prototype.oil = 12.3;
+      Mini.prototype.door = 3;
+      Mini.prototype.starting = function (x) {
+        if (x === "on") {
+          alert(`${this.color}인 ${this.brand}가 시동이 켜졌습니다.`);
+        } else if (x === "off") {
+          alert(`${this.color}인 ${this.brand}가 시동이 꺼졌습니다.`);
+        }
+      };
+      const appleCar = new Mini("red", 20, "black");
+      const bananaCar = new Mini("blue", 16, "green");
+
+      // appleCar.starting("on");
+      // bananaCar.starting("off");
+
+      // document.write(appleCar.wheel);
+      // document.write(bananaCar.wheel);
+
+      console.log(appleCar);
+      console.log(bananaCar);
+    </script>
+  </body>
+</html>

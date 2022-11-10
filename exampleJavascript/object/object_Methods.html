@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>property & Method</h2>
+
+    <script>
+      const coworkers = {
+        programmer: "egoing",
+        designer: "lee",
+      };
+      document.write("programmer : " + coworkers.programmer + "<br>");
+      document.write("designer : " + coworkers.designer + "<br>");
+      coworkers.bookkeeper = "park";
+      document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+      coworkers["data scientist"] = "taeho";
+      document.write(
+        "data scientist : " + coworkers["data scientist"] + "<br>"
+      );
+
+      coworkers.showAll = function () {
+        for (let key in this) {
+          document.write(key + " : ", this[key] + "<br>");
+        }
+      };
+      coworkers.showAll();
+    </script>
+  </body>
+</html>
