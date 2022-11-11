@@ -5,3 +5,4 @@
 // stringify(obj)
 
 //2. JSON to Object(JSON -> Object)
+//parse(json)
